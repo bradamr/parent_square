@@ -1,0 +1,22 @@
+<div class="container-fluid p-4">
+  <div class="h2 mb-3">
+    <%= t 'messaging_history' %>
+  </div>
+
+  <table class="table table-dark table-striped">
+      <tr>
+        <th><%= t 'date_and_time' %></th>
+        <th><%= t 'phone_number' %></th>
+        <th><%= t 'message' %></th>
+        <th><%= t 'status' %></th>
+      </tr>
+      <tr><td>Row 1</td></tr>
+      <tr><td>Row 2</td></tr>
+    </table>
+
+    <div class="container-fluid text-right button_bar rounded p-2">
+      <%= button_tag (t 'new_message'), type: 'button', id: 'new_message', class: 'btn btn-primary', data: {toggle: 'modal', target: '#new_message_modal'} %>
+    </div>
+
+    <%= render partial: 'messaging/modals/new_message' %>
+</div>
